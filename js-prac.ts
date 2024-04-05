@@ -36,7 +36,7 @@ const sortedNames = userNames.sort(
 );
 //console.log('userNames',sortedNames);
 
-const range = (start:number, end:number) => [...Array(end-start).keys()].map((el) => el+start);
+//const range = (start:number, end:number) => [...Array(end-start).keys()].map((el) => el+start);
 
 //console.log(range(34,99))
 
@@ -45,7 +45,7 @@ const Employee = function(id:number,name:string){
     this.id = id;
     this.name = name;
     
-    this.printEmployee(){
+    this.printEmployee = function(){
         console.log('Employee Details ...', this.id, this.name)
     }
 
