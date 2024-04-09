@@ -133,6 +133,8 @@ export default class Main {
     this.ll.push(43); //1
     this.ll.push(51); //2
     this.ll.push(60); //3
+    this.ll.push(91); //4
+
     // console.log('head', this.ll.head);
     // console.log('tail', this.ll.tail);
 
@@ -156,10 +158,13 @@ export default class Main {
     // console.log('next head', this.ll.head.next);
 
     //Set index
-    console.log('get index before set', this.ll.insert(2, 100));
+    //console.log('get index before set', this.ll.insert(2, 100));
 
-    console.log('sfter reverse', this.ll.reverse());
-    console.log('get index', this.ll.getIndex(2));
-    console.log('next head', this.ll.head.next);
+    //console.log('sfter reverse', this.ll.reverse());
+   // console.log('get index', this.ll.getIndex(2));
+   // console.log('next head', this.ll.head.next);
   }
 }
+
+const ll = new Main();
+ll.executeCode();
