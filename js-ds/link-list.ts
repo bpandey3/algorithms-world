@@ -1,3 +1,15 @@
+//10 -->5-->16-->null
+// head  node  tail -->null
+
+class LLNode {
+  value;
+  next;
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
 class LinkedList {
   head: any;
   tail: any;
@@ -113,14 +125,7 @@ class LinkedList {
   }
 }
 
-class LLNode {
-  value;
-  next;
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+
 
 export default class Main {
   ll: LinkedList;
