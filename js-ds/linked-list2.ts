@@ -95,6 +95,41 @@ insert(index:number, value:any){
 
 }
 
+remove(index){
+    const leader = this.traverseList(index-1);
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this.printList();
+
+}
+
+reverse(){
+
+    if(this.length==0)
+        return this.printList();
+
+    let first = this.head;
+    //let last = this.tail;
+    this.tail = this.head;
+    let second = first.next;
+
+    while(second){
+        const temp = second.next;
+        second.next = first;
+        first = second;
+        second = temp;
+    }
+
+    this.head.next = null;
+    this.head = first;
+    return this.printList();
+
+
+
+
+}
+
     
 }
 
@@ -104,10 +139,14 @@ myLL.append(16);
 myLL.prepend(1);
 myLL.prepend(1);
 
-console.log(myLL.printList());
+//console.log(myLL.printList());
 
 //[ 1, 1, 10, 5, 16 ]
 
 myLL.insert(3,15);
 
 console.log(myLL.printList());
+
+// console.log(myLL.remove(4))
+
+console.log(myLL.reverse());
